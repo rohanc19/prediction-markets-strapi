@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prediction_markets",
+  "info": {
+    "singularName": "prediction-market",
+    "pluralName": "prediction-markets",
+    "displayName": "Prediction Market",
+    "description": "Prediction markets generated from news articles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed",
+        "resolved"
+      ],
+      "default": "open",
+      "required": true
+    },
+    "endTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "resolutionTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "yesCount": {
+      "type": "integer",
+      "default": 50000,
+      "required": true
+    },
+    "noCount": {
+      "type": "integer",
+      "default": 50000,
+      "required": true
+    },
+    "currentYesProbability": {
+      "type": "decimal",
+      "default": 0.5,
+      "required": true
+    },
+    "currentNoProbability": {
+      "type": "decimal",
+      "default": 0.5,
+      "required": true
+    },
+    "resolutionSource": {
+      "type": "string"
+    },
+    "externalId": {
+      "type": "string"
+    }
+  }
+}
