@@ -1,0 +1,29 @@
+{
+  "name": "prediction-markets-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi CMS for Prediction Markets API",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/plugin-i18n": "4.15.5",
+    "better-sqlite3": "8.6.0"
+  },
+  "author": {
+    "name": "Prediction Markets Team"
+  },
+  "strapi": {
+    "uuid": "prediction-markets-strapi"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
