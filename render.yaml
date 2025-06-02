@@ -3,8 +3,8 @@ services:
     name: prediction-markets-strapi
     env: node
     plan: free
-    buildCommand: npm install --legacy-peer-deps && npm run build
-    startCommand: npm start
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: npm run build && npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -30,4 +30,8 @@ services:
         value: --max-old-space-size=1024
       - key: NPM_CONFIG_PRODUCTION
         value: false
+      - key: STRAPI_DISABLE_UPDATE_NOTIFICATION
+        value: true
+      - key: CI
+        value: true
     autoDeploy: true

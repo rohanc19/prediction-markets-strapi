@@ -4,16 +4,23 @@
   "version": "0.1.0",
   "description": "Strapi CMS for Prediction Markets API",
   "scripts": {
-    "build": "strapi build",
+    "build": "NODE_ENV=production strapi build --no-optimization",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "postinstall": "strapi build --no-optimization"
   },
   "dependencies": {
     "@strapi/strapi": "4.15.5",
     "@strapi/plugin-users-permissions": "4.15.5",
     "@strapi/plugin-i18n": "4.15.5",
     "better-sqlite3": "8.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^5.2.0",
